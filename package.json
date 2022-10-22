@@ -1,0 +1,25 @@
+{
+    "name": "contactusapi",
+    "version": "1.0.0",
+    "description": "API to send and recive data of the contact us page",
+    "main": "./functions/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node ./functions/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/arjund-06/ContactUsAPI.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/arjund-06/ContactUsAPI/issues"
+    },
+    "homepage": "https://github.com/arjund-06/ContactUsAPI#readme",
+    "dependencies": {
+        "express": "^4.18.2",
+        "expressjs": "^1.0.1",
+        "prisma": "^4.5.0"
+    }
+}
