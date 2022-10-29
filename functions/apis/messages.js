@@ -1,5 +1,23 @@
 const { prisma, cors } = require("../application")
 
+exports.getMessages = async function(req, res) {
+    cors(req, res, async() => {
+        const r = await prisma.messages.findMany()
+        res.send(r);
+    })
+}
+
+exports.getMessageByEmail = async function(req, res) {
+    cors(req, res, async() => {
+        const r = await prisma.messages.findMany({
+            where: {
+                OR: [{ email: { contains: req.params.email } }]
+            }
+        })
+        res.send(r);
+    })
+}
+
 
 exports.createMessage = async function(req, res) {
     cors(req, res, async() => {
